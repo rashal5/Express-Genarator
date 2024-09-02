@@ -113,36 +113,24 @@
             <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
-    <% for (let x of data) { %>
         <div class="product-card">
-            <img src="<%= x.imageUrl %>" alt="<%= x.name %>">
             <div class="product-info">
-                <h2><%= x.name %></h2>
-                <p><%= x.description %></p>
-                <p><%= x.category %></p>
-                <p>quanity:<%= x.quanity %></p>
-                <% if(x.quanity==0){%>
-                    <p>Out of Stock</p>
-                <% }else{ %>
-                    <P>product available</P>
-                    <% } %>   
-                <div class="price">$<%= x.price %></div>
-                <% if(x.category=="Electronics"){%>
-                    <a href="productinfo/<%= x.id %>" class="add-to-cart">more info</a>
-                <% }else if(x.category=="food"){ %>
-                    <a href="foodproductinfo/<%= x.id %>" class="add-to-cart">more info</a>
-                <% }else if(x.category=="Smartwatches"){ %>
-                    <a href="Smartwatchesproductinfo/<%= x.id %>" class="add-to-cart">more info</a>
-                <% }else if(x.category=="shoes"){ %>
-                    <a href="shoesproductinfo/<%= x.id %>" class="add-to-cart">more info</a>
-                <% }else{ %>
-                        <a href="productLaptops/<%= x.id %>" class="add-to-cart">more info</a>
-                <% } %>
+             
+                    <a href="/product" class="add-to-cart">product info</a>
+           
+                    <a href="/food" class="add-to-cart">food info</a>
+               
+                    <a href="/Smartwatches" class="add-to-cart">Smartwatches info</a>
+      
+                    <a href="/shoes" class="add-to-cart">shoes info</a>
+
+                    <a href="/Laptops" class="add-to-cart">Laptops info</a>
+    
                         
                
             </div>
         </div>
-    <% } %>
+
     
 
     <footer>
